@@ -16,8 +16,9 @@ const EnvVariables = () => {
       {process.env.NODE_ENV === "development"
         ? REACT_APP_DEV_MODE
         : REACT_APP_PRO_MODE}
-
-        <div>TEST - getEnvironment:  {getEnvironment()}</div>
+      <br />
+      <br />
+      <div>TEST - getEnvironment: {getEnvironment()}</div>
     </>
   );
 };
