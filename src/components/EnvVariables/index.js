@@ -5,7 +5,7 @@ import {
   REACT_APP_DEV_MODE,
   REACT_APP_PRO_MODE,
 } from "../../constants/environmentVariables";
-import getEnvironment from "../../utils/getEnviroment.js";
+import getEnvironment from "../../utils/getEnviroment";
 
 const EnvVariables = () => {
   return (
