@@ -1,24 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { REACT_APP_TEST_API_URL } from "../../constants/environmentVariables";
+import useFetch from "../../utils/useFetch";
 
 const NodeAPI = () => {
-  const [testAPIResponse, setTestAPIResponse] = useState("");
+  const { data, error, loading } = useFetch(REACT_APP_TEST_API_URL);
 
-  const getTestAPIResponse = () => {
-    fetch(REACT_APP_TEST_API_URL)
-      .then((res) => res.text())
-      .then((res) => setTestAPIResponse(res));
-  };
-  
+  if (error) {
+    console.log(error);
+  }
 
-  useEffect(() => {
-    setTestAPIResponse(getTestAPIResponse());
-  }, []);
-
-  return(
+  return (
     <>
       <h3>Node API Results:</h3>
-      <p>{testAPIResponse}</p>
+      {loading && <div>Loading...</div>}
+      <p>{data}</p>
     </>
   );
 };
