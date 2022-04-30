@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "../components/Layout";
 import HomePage from "../pages/HomePage";
 import EnvVariablesPage from "../pages/EnvVariablesPage";
@@ -10,9 +10,9 @@ import ErrorBoundary from "../components/ErrorBoundary";
 const RouterRoutes = () => {
   return (
     <ErrorBoundary>
-      <BrowserRouter>
+      <Router>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path={'/' || '/home'} element={<Layout />}>
             <Route index element={<HomePage />} />
             <Route path="env-variables" element={<EnvVariablesPage />} />
             <Route path="node-api" element={<NodeAPIPage />} />
@@ -20,7 +20,7 @@ const RouterRoutes = () => {
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
-      </BrowserRouter >
+      </Router >
     </ErrorBoundary>
   );
 };
