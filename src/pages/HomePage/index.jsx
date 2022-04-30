@@ -4,10 +4,10 @@ const HomePage = () => {
   return (
     <>
       <h1>Home Page</h1>
-      <ul>Topics:</ul>
-      <li><Link to="/env-variables">EnvVariablesPage</Link></li>
-      <li><Link to="/node-api">NodeAPIPage</Link></li>
-      <li><Link to="/error-boundary">Error Boundary Test Page</Link></li>
+      <ul><h3>Topics:</h3></ul>
+      <li><Link to="/env-variables">Env Variables Page</Link></li>
+      <li><Link to="/node-api">Node API Response Page</Link></li>
+      <li><Link to="/error-boundary">Error Boundary Page</Link></li>
     </>
   );
 };
