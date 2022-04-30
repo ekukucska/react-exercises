@@ -11,9 +11,12 @@ const NodeAPI = () => {
 
   return (
     <>
-      <h3>Node API Results:</h3>
+      <h1>Node API</h1>
+      <h3>Data from Node API:</h3>
       {loading && <div>Loading...</div>}
       <p>{data}</p>
+      <br />
+      <p style={{ fontStyle: 'italic' }}>*Fetched with a custom hook that uses fetch() to get data from a Node.js/Express.js API.</p>
     </>
   );
 };

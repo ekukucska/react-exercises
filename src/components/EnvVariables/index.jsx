@@ -11,7 +11,7 @@ const EnvVariables = () => {
   return (
     <>
       <h1>{REACT_APP_TITLE}</h1>
-      <h3>{REACT_APP_DESCRIPTION}</h3>
+      <h3>{REACT_APP_DESCRIPTION}:</h3>
 
       {process.env.NODE_ENV === "development"
         ? REACT_APP_DEV_MODE
