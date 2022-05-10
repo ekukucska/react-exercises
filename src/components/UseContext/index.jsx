@@ -2,7 +2,14 @@ import React, { useContext } from "react";
 import ThemeContext from "../../context/ThemeContext";
 
 const UseContext = () => {
-  const [ theme, setTheme ] = useContext(ThemeContext);
+  const { theme, setTheme } = useContext(ThemeContext);
+
+  const setDarkTheme = ()=> {
+    setTheme('theme-dark');
+  }
+  const setLightTheme = ()=> {
+    setTheme('theme-light');
+  }
 
   return (
     <>
@@ -11,9 +18,9 @@ const UseContext = () => {
       <br/>
       <div>useContext value: {theme}</div>
       <br/>      
-      <button onClick={()=>setTheme('theme-light')}>Change Theme to LIGHT</button>
+      <button onClick={setLightTheme}>Change Theme to LIGHT</button>
       <br />
-      <button onClick={()=>setTheme('theme-dark')}>Change Theme to DARK</button>
+      <button onClick={setDarkTheme}>Change Theme to DARK</button>
     </>
   );
 };

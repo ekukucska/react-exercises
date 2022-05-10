@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useMemo, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ErrorBoundary from "../components/ErrorBoundary";
 import Layout from "../components/Layout";
@@ -13,10 +13,15 @@ import NoPage from "../pages/NoPage";
 
 const RouterRoutes = () => {
   const [theme, setTheme] = useState("theme-light");
+  
+  const value = useMemo(
+    () => ({ theme, setTheme }), 
+    [theme]
+  );
   return (
     <ErrorBoundary>
       <Router>
-        <ThemeContext.Provider value={[theme, setTheme]} >
+        <ThemeContext.Provider value={{theme, setTheme}} >
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
