@@ -4,7 +4,7 @@ import ThemeContext from "../../context/ThemeContext";
 import "./index.css";
 
 const Layout = () => {
-  const [ theme, setTheme ] = useContext(ThemeContext);
+  const { theme, setTheme } = useContext(ThemeContext);
   return (
     <div className={theme}>
       <h1>HEADER</h1>
