@@ -1,9 +1,13 @@
 import React from 'react';
-import UseContext from '../../components/UseContext';
+import ThemeContext from '../../components/UseContext/ThemeContext';
+import UserContext from '../../components/UseContext/UserContext';
 
-const UseContextPage = ()=> {
-  return(
-    <UseContext />
+const UseContextPage = () => {
+  return (
+    <>
+      <ThemeContext />
+      <UserContext />
+    </>
   );
 };
 
