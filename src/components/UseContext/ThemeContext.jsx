@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import ThemeContext from "../../context/ThemeContext";
 
-const UseContext = () => {
+const Context = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
-  const setDarkTheme = ()=> {
+  const setDarkTheme = () => {
     setTheme('theme-dark');
   }
-  const setLightTheme = ()=> {
+  const setLightTheme = () => {
     setTheme('theme-light');
   }
 
@@ -15,14 +15,15 @@ const UseContext = () => {
     <>
       <h1>useContext Hook</h1>
       <h3>useContext:</h3>
-      <br/>
+      <br />
       <div>useContext value: {theme}</div>
-      <br/>      
+      <br />
       <button onClick={setLightTheme}>Change Theme to LIGHT</button>
       <br />
       <button onClick={setDarkTheme}>Change Theme to DARK</button>
+      <br /><br />
     </>
   );
 };
 
-export default UseContext;
+export default Context;
