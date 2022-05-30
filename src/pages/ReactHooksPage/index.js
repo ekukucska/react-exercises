@@ -6,6 +6,7 @@ const ReactHooksPage = () => {
     <>
       <h1>React Hooks Page</h1>
       <ul><h3>Featured Hooks:</h3></ul>
+      <li><Link to="/react-hooks/usestate-hook">useState Hook</Link></li>
       <li><Link to="/react-hooks/usecontext-hook">useContext Hook</Link></li>
     </>
   );

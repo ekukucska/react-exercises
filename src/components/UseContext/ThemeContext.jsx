@@ -13,9 +13,6 @@ const Context = () => {
 
   return (
     <>
-      <h1>useContext Hook</h1>
-      <h3>useContext:</h3>
-      <br />
       <div>useContext value: {theme}</div>
       <br />
       <button onClick={setLightTheme}>Change Theme to LIGHT</button>
