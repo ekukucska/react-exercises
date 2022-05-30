@@ -9,6 +9,7 @@ import NodeAPIPage from "../pages/NodeAPIPage";
 import ErrorBoundaryPage from "../pages/ErrorBoundaryPage";
 import ReactHooksPage from "../pages/ReactHooksPage";
 import UseContextPage from "../pages/UseContextPage";
+import UseStatePage from "../pages/UseStatePage";
 import NoPage from "../pages/NoPage";
 
 const RouterRoutes = () => {
@@ -26,8 +27,8 @@ const RouterRoutes = () => {
             </Route>
             <Route path="react-hooks" element={<Layout />}>
               <Route index element={<ReactHooksPage />} />
-              <Route path=":react-hook" element={<UseContextPage />} />
               <Route path="usecontext-hook" element={<UseContextPage />} />
+              <Route path="usestate-hook" element={<UseStatePage />} />
             </Route>
             <Route path="*" element={<NoPage />} />
           </Routes>
