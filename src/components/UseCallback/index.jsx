@@ -1,5 +1,4 @@
 import React, { useCallback, useState } from "react";
-// import UseMemoChild from "./UseMemoChild";
 
 const UseCallback = () => {
   const [numberA, setNumberA] = useState(0);

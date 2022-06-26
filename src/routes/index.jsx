@@ -13,6 +13,7 @@ const UseStatePage = lazy(() => import("../pages/UseStatePage"));
 const UseContextPage = lazy(() => import("../pages/UseContextPage"));
 const UseMemoPage = lazy(() => import("../pages/UseMemoPage"));
 const UseCallbackPage = lazy(() => import("../pages/UseCallbackPage"));
+const UseRefPage = lazy(() => import("../pages/UseRefPage"));
 const NoPage = lazy(() => import("../pages/NoPage"));
 
 const RouterRoutes = () => {
@@ -35,6 +36,7 @@ const RouterRoutes = () => {
                 <Route path="usecontext-hook" element={<UseContextPage />} />
                 <Route path="usememo-hook" element={<UseMemoPage />} />
                 <Route path="usecallback-hook" element={<UseCallbackPage />} />
+                <Route path="useref-hook" element={<UseRefPage />} />
               </Route>
               <Route path="*" element={<NoPage />} />
             </Routes>
