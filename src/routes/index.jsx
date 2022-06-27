@@ -10,6 +10,7 @@ const NodeAPIPage = lazy(() => import("../pages/NodeAPIPage"));
 const ErrorBoundaryPage = lazy(() => import("../pages/ErrorBoundaryPage"));
 const ReactHooksPage = lazy(() => import("../pages/ReactHooksPage"));
 const UseStatePage = lazy(() => import("../pages/UseStatePage"));
+const UseEffectPage = lazy(() => import("../pages/UseEffectPage"));
 const UseContextPage = lazy(() => import("../pages/UseContextPage"));
 const UseMemoPage = lazy(() => import("../pages/UseMemoPage"));
 const UseCallbackPage = lazy(() => import("../pages/UseCallbackPage"));
@@ -33,6 +34,7 @@ const RouterRoutes = () => {
               <Route path="react-hooks" element={<Layout />}>
                 <Route index element={<ReactHooksPage />} />
                 <Route path="usestate-hook" element={<UseStatePage />} />
+                <Route path="useeffect-hook" element={<UseEffectPage />} />
                 <Route path="usecontext-hook" element={<UseContextPage />} />
                 <Route path="usememo-hook" element={<UseMemoPage />} />
                 <Route path="usecallback-hook" element={<UseCallbackPage />} />

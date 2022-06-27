@@ -1,5 +1,5 @@
 import React from "react";
-import { REACT_APP_TEST_API_URL } from "../../constants/environmentVariables";
+import { REACT_APP_TEST_API_URL } from "../../constants/EnvironmentalVariables";
 import useFetch from "../../utils/useFetch";
 
 const NodeAPI = () => {

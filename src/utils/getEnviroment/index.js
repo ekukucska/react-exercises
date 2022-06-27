@@ -2,7 +2,7 @@ import {
   REACT_APP_DEV_MODE,
   REACT_APP_PRO_MODE,
   REACT_APP_TEST_MODE,
-} from "../../constants/environmentVariables";
+} from "../../constants/EnvironmentalVariables";
 
 const getEnvironmet = () => {
   if (process.env.NODE_ENV === "development") {

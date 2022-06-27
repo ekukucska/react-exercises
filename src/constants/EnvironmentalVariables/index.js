@@ -1,4 +1,3 @@
-
 export const REACT_APP_TITLE  = process.env.REACT_APP_TITLE;
 
 export const REACT_APP_DESCRIPTION = process.env.REACT_APP_DESCRIPTION;
@@ -16,4 +15,3 @@ export const REACT_APP_TEST_API_BASE_URL = process.env.REACT_APP_TEST_API_BASE_U
 export const REACT_APP_TEST_API_PORT = process.env.REACT_APP_TEST_API_PORT;
 
 export const REACT_APP_TEST_API_PATH = process.env.REACT_APP_TEST_API_PATH;
-
