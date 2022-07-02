@@ -34,7 +34,7 @@ const UseEffect = () => {
     <>
       <h4>Placeholder API Data:</h4>
       <div>
-        <button onClick={showPost}>Show Posts</button>
+        <button onClick={showPost}>Show/Hide Posts</button>
         <p>Posts:</p>
         {show &&
           (!error ? (
