@@ -9,6 +9,7 @@ const UseState = () => {
   const [count, setCount] = useState(0);
   const [user, setUser] = useState({});
   const [list, setList] = useState([]);
+  const [hero, setHero] = useState({ name: "Superman", team: "Justice League" });
 
   const increaseCount = () => {
     setCount(prevCount => prevCount + 1);
@@ -32,6 +33,30 @@ const UseState = () => {
   }
   const shoppingList = () => {
     setList(['bread', 'apples', 'milk', 'chicken', 'eggs', 'oranges']);
+  }
+
+  const setHeroToIronMan = () => {
+    setHero((prevVal) => {
+      return {
+        ...prevVal,
+        name: "Iron Man",
+        team: "Avengers"
+      };
+    });
+  }
+  const setHeroToWolverine = () => {
+    setHero((prevVal) => {
+      return { name: "Deadpool" };
+    });
+  }
+  const setHeroToSuperman = () => {
+    setHero((prevVal) => {
+      return {
+        ...prevVal,
+        name: "Superman",
+        team: "Justice League"
+      }
+    });
   }
 
   return (
@@ -59,6 +84,15 @@ const UseState = () => {
           <li key={listItem}>{listItem}</li>)
         )}
       </ul>
+      <br />
+      <h4>useState - updating state object with spread syntax:</h4>
+      <p>Hero name: {hero.name}</p>
+      <p>Team: {hero.team}</p>
+      <button onClick={setHeroToIronMan}>Iron Man</button>
+      <button onClick={setHeroToWolverine}>Deadpool</button>
+      <button onClick={setHeroToSuperman}>Superman</button>
+      <br />
+      <p><i>*Wolverine only passes the changed parameter, while Superman and Iron Man use the spread syntax, to keep all parameters, even those that remain the same.</i></p>
     </>
   );
 };
